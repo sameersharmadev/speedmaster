@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <title>Omega</title>
+</head>
+<body class="font-roboto fade-in">
+    <!--HERO-->
+    
+    <div id="hero" class="relative w-full h-screen flex flex-col justify-center items-center">
+        <video class="absolute top-0 left-0 w-full h-full object-cover object-left" autoplay muted playsinline>
+            <source src="./img/herovid.mp4" type="video/mp4">
+            <img src="./img/Herobg.png" alt="Background image" class="object-cover w-full h-full">
+        </video>
+        <a id="disclaimerLink" href="" class="text-white self-end mr-5 mt-3 text-xs z-10">Disclaimer</a>
+        <div id="disclaimerPopup" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+          <div class="bg-white p-6 rounded shadow-lg max-w-md mx-4">
+              <h2 class="text-3xl text-center mb-4">DISCLAIMER</h2>
+              <p>This project is an independent work created for demonstrative purposes only. I am not affiliated, or in any way connected to OMEGA. This project is intended solely to showcase my web designing and development skills.</p>
+              <p>Also, this is not a clone of OMEGA website but my own redesigned landing page (I did try to recreate brand style however, in my own unique way). The reason I did not create a fictional brand for this even though I like to because of creative freedom, is simply because I could not be find images/assets for them. Also I can't just make my own product just for sake of the project, and even if I did, I am not a professional photographerer to get actual good images ;) 
+              <br>
+              <a href="https://www.omegawatches.com/watches/speedmaster" target="_blank" class="text-accent">Original Website</a></p>
+              <button id="closePopup" class="mt-4 w-full self-end bg-accent text-white px-4 py-2 rounded">Close</button>
+          </div>
+      </div>
+          <div class="relative z-10 flex flex-col items-center justify-center h-full text-white gap-4 md:gap-4">
+            <img src="./img/herobranding1.png" class="w-10/12 md:w-full">
+            <p class="text-xl md:text-5xl">The First Watch Worn on the Moon</p>
+            <button class="bg-transparent text-white border-2 border-white py-2 px-6 transition duration-300 hover:bg-white hover:text-black mt-8 md:text-3xl"  onclick="scrollToSection('collection')">
+                View Collection
+            </button>    
+          </div>
+    </div>
+    <div class="container mx-auto px-4 py-20 md:px-28 text-center">
+        <div class="w-full mb-6 md:mb-0">
+        <h2 class="text-accent text-3xl font-raleway md:text-5xl mb-3">Historic Precision</h2>
+        <p class="text-base md:text-xl text-black">Discover the legendary Speedmaster collection, Omega’s esteemed line of luxury, Swiss‑made watches. With a rich heritage in space exploration, the Speedmaster boasts unparalleled precision and style, with diverse models that each offer distinct features and designs. Unravel the captivating history behind these iconic timepieces and find your perfect Speedmaster watch- a famous mark of true horological excellence.</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 mb-20 md:px-28 text-center">
+        <h2 class="text-accent font-raleway text-3xl md:text-5xl mb-3">Timeless Design</h2>
+        <p class="text-base md:text-xl text-black">
+            The watch features an asymmetrical 42 mm case in stainless steel – and is built in the classic 4th generation style that was worn by Apollo 11 astronauts during history’s first moon landing. Choose it with hesalite glass with an embossed Seahorse caseback, or the model with sapphire-crystal glass on both sides.
+        </p>
+    </div>
+    
+    
+        <div class="bg-basic mx-8 md:mx-28 p-4 md:px-8">
+    <h2 class="text-accent font-raleway text-center text-3xl md:text-5xl mb-5 md:mb-10">On The Surface</h2>
+    <div id="carousel" class="carousel flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 gap-5">
+        <div class="carousel-item active w-full flex flex-col md:flex-row items-center gap-4 md:gap-10">
+            <div class="w-full h-64">
+                <img src="./img/DotsOverNinety.png" alt="Carousel Image 1" class="w-full h-full object-cover">
+            </div>
+            <div class="w-full">
+                <h2 class="text-accent text-3xl md:text-3xl mb-3">Step Dials</h2>
+                <p class="text-base md:text-xl text-black">As well as featuring its three subdials, the black step dial includes a domed minute and seconds chronograph hands, as well as an adjusted minute track for the new movements frequency</p>
+            </div>
+        </div>
+        
+        <div class="carousel-item w-full flex flex-col md:flex-row items-center gap-4 md:gap-10">
+            <div class="w-full md:w-1/2 h-64">
+                <img src="./img/StepDials.png" alt="Carousel Image 2" class="w-full h-full object-cover">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="text-accent text-3xl md:text-3xl mb-3">Dot Over Ninety</h2>
+                <p class="text-base md:text-xl text-black">The infamous dot over 90 (DON) and a dot diagonal to 70 are included on the anodised aluminium bazel ring</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden md:flex justify-end space-x-2 mt-6">
+        <button id="prevBtn" class="bg-basic-dark hover:bg-accent text-white px-4 py-2">&lt;</button>
+        <button id="nextBtn" class="bg-basic-dark hover:bg-accent text-white px-4 py-2">&gt;</button>
+    </div>
+</div>
+
+    <div class="mx-8 my-10 md:mx-28 p-4 md:px-8 md:py-10">
+        <div class="flex flex-col md:flex-row items-center justify-center">
+          <div class="w-full md:w-8/12">
+            <h2 class="text-accent font-raleway text-center text-3xl md:text-5xl mb-5">CALIBRE OMEGA 3861</h2>
+            <p class="text-base md:text-xl text-black self-center">It took 4 years to produce a calibre that could achieve Master Chronometer certification, while also matching the dimensions of the previous Moonwatch movement - the 1861. The new calibre has done exactly that, while improving the power reserve, chronometric performance and magnetic resistance.</p>
+          </div>
+          <div class="w-10/12 md:w-4/12 mt-5 md:mt-0 flex justify-center">
+            <img src="./img/calibre3861.png" alt="calibre3861" class="object-cover md:w-8/12">
+          </div>
+        </div>
+    </div>
+    <section id="collection">
+      <div class="bg-basic mx-8 md:mx-28 p-4 my-20 md:px-8">
+        <h2 class="text-accent font-raleway text-center text-3xl md:text-5xl mb-5 md:mb-10">-MOONWATCH PROFESSIONAL-</h2>
+      
+        <div class="flex flex-wrap justify-center items-center text-center">
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31032425004002" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/moonwatch/image-1.png" alt="Image 1" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">STEEL ON LEATHER</p>
+          </a>
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31032425004001" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/moonwatch/image-2.png" alt="Image 2" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">STEEL ON RUBBER</p>
+          </a>
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31020425002001" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/moonwatch/image-3.png" alt="Image 3" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">GOLD ON STEEL</p>
+          </a>
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31030425001002" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/moonwatch/image-4.png" alt="Image 4" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">STEEL ON STEEL</p>
+          </a>
+        </div>
+      
+        <div class="text-center mt-6">
+          <a href="https://www.omegawatches.com/watches/speedmaster/moonwatch-professional/catalog" target="_blank"  class="text-base md:text-xl text-black">View All</a>
+        </div>
+      </div>
+      
+      <div class="bg-basic mx-8 md:mx-28 my-20 p-4 md:px-8">
+        <h2 class="text-accent font-raleway text-center text-3xl md:text-5xl mb-5 md:mb-10">-HERITAGE MODELS-</h2>
+      
+        <div class="flex flex-wrap justify-center items-center text-center">
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-anniversary-series-co-axial-master-chronometer-chronograph-42-mm-31032425002001" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/heritage/image-1.png" alt="Image 1" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">ANNIVERSARY</p>
+          </a>
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-calibre-321-chronograph-42-mm-31193423099001" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/heritage/image-2.png" alt="Image 2" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">CALIBRE 321</p>
+          </a>
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-calibre-321-chronograph-39-7-mm-31130403001001" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/heritage/image-3.png" alt="Image 3" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">CALIBRE 321</p>
+          </a>
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-57-co-axial-master-chronometer-chronograph-40-5-mm-33210415101001" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/heritage/image-4.png" alt="Image 4" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">SPEEDMASTER’67</p>
+          </a>
+        </div>
+      
+        <div class="text-center mt-6">
+          <a href="https://www.omegawatches.com/watches/speedmaster/heritage-models/catalog" target="_blank" class="text-base md:text-xl text-black">View All</a>
+        </div>
+      </div>
+
+      <div class="bg-basic mx-8 md:mx-28 my-20 p-4 md:px-8">
+        <h2 class="text-accent font-raleway text-center text-3xl md:text-5xl mb-5 md:mb-10">-DARK SIDE OF THE MOON-</h2>
+      
+        <div class="flex flex-wrap justify-center items-center text-center">
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31192445101004" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/DarkMoon/image-1.png" alt="Image 1" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">CERAMIC ON LEATHER</p>
+          </a>
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31163445106001" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/DarkMoon/image-2.png" alt="Image 2" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">CERAMIC ON LEATHER</p>
+          </a>
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31192445101006" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/DarkMoon/image-3.png" alt="Image 3" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">CERAMIC ON LEATHER</p>
+          </a>
+          <a href="https://www.omegawatches.com/watch-omega-speedmaster-dark-side-of-the-moon-co-axial-chronometer-chronograph-44-25-mm-31192445101007" target="_blank" class="w-1/2 md:w-1/4 bg-basic p-4">
+            <img src="./img/DarkMoon/image-4.png" alt="Image 4" class="h-auto object-cover mb-4">
+            <p class="text-sm md:text-xl text-black">CERAMIC ON NYLON</p>
+          </a>
+        </div>
+      
+        <div class="text-center mt-6">
+          <a href="https://www.omegawatches.com/watches/speedmaster/dark-side-of-the-moon/catalog" target="_blank" class="text-base md:text-xl text-black">View All</a>
+        </div>
+      </div>
+
+      <div class="carousel-container relative w-full overflow-hidden h-40 md:h-128">
+        <div id="carousel-images" class="h-full relative mx-8 md:mx-28">
+            <img src="./img/Gallary1.png" loading="lazy" alt="Gallery Image 1" class="carousel-image absolute inset-0 w-full h-full object-cover object-left opacity-0 transition-opacity duration-100">
+            <img src="./img/Gallary2.png" loading="lazy" alt="Gallery Image 2" class="carousel-image absolute inset-0 w-full h-full object-cover object-left opacity-0 transition-opacity duration-100">
+            <img src="./img/Gallary3.png" loading="lazy" alt="Gallery Image 3" class="carousel-image absolute inset-0 w-full h-full object-cover object-left opacity-0 transition-opacity duration-100">
+            <img src="./img/Gallary4.png" loading="lazy" alt="Gallery Image 4" class="carousel-image absolute inset-0 w-full h-full object-cover object-left opacity-0 transition-opacity duration-100">
+        </div>
+        <button id="previousImage" class="mx-8 md:mx-28 absolute left-0 top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-50 text-white px-4 py-2 rounded-full text-lg md:text-8xl">‹</button>
+        <button id="nextImage" class="mx-8 md:mx-28 absolute right-0 top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-50 text-white px-4 py-2 rounded-full text-lg md:text-8xl">›</button>
+    </div>
+    
+    
+    
+
+      <div class="flex flex-col md:flex-row justify-center md:gap-64 items-center mx-8 md:mx-28 my-20 p-4 md:px-8">
+        <div class="flex flex-col md:flex-row items-start md:items-end">
+            <div class="flex flex-col mb-4 md:mb-0">
+                <div class="text-base md:text-xl text-black">SUBSCRIBE TO NEWSLETTER</div>
+                <div class="border border-black flex items-center mt-2">
+                    <input type="email" placeholder="Email" class="px-4 py-2 md:w-96" />
+                    <button onclick="window.open('https://www.omegawatches.com/newsletter?', '_blank')" id="newslettersubmit" class="bg-accent text-white px-4 py-2 flex items-center">
+                        <span>&gt;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start md:ml-6">
+            <span class="text-base md:text-xl text-black">FOLLOW US ON:</span>
+            <div class="flex mt-2 space-x-2 h-10">
+                <img src="./img/linkedin.png" alt="LinkedIn" class="h-6 w-6 md:h-8 md:w-8" />
+                <img src="./img/instagram-dark.png" alt="Instagram" class="h-6 w-6 md:h-8 md:w-8" />
+                <img src="./img/whatsapp-dark.png" alt="WhatsApp" class="h-6 w-6 md:h-8 md:w-8" />
+                <img src="./img/email-dark.png" alt="Email" class="h-6 w-6 md:h-8 md:w-8" />
+                <img src="./img/twitter-dark.png" alt="Twitter" class="h-6 w-6 md:h-8 md:w-8" />
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-accent text-white py-10 flex flex-col gap-5">
+    <div class="flex mt-2 justify-center space-x-2">
+      <img src="./img/linkedin-dark.png" alt="LinkedIn" class="h-6 w-6" />
+      <img src="./img/instagram.png" alt="Instagram" class="h-6 w-6" />
+      <img src="./img/whatsapp.png" alt="WhatsApp" class="h-6 w-6" />
+      <img src="./img/email.png" alt="Email" class="h-6 w-6" />
+      <img src="./img/twitter.png" alt="Twitter" class="h-6 w-6" />
+    </div>
+      <div class="container w-8/12 mx-auto text-center">
+          <p class="text-base md:text-lg">
+              All trademarks, logos, and content associated with OMEGA are the property of their respective owners
+          </p>
+      </div>
+  </footer>
+  
+    
+    </section>
+    <script src="./script/script.js"></script>
+</body>
+</html>
