@@ -1206,3 +1206,8 @@ video {
     line-height: 1.75rem;
   }
 }
+img {
+  -webkit-tap-highlight-color: transparent; 
+  -webkit-optical-padding-adjustment: none; 
+  pointer-events: none; 
+}
